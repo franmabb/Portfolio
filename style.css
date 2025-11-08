@@ -10,7 +10,7 @@
   --bg-color: #080808;
   --second-bg-color: #101010;
   --text-color: white;
-  --main-color: #87CEFA;
+  --main-color: #c084fc;
 }
 
 body{
@@ -53,8 +53,8 @@ html {
 span{
     background: linear-gradient(
         270deg,
-        #DF8908 10%,
-        #ff1d15 100%
+     #c084fc 10%,
+        #a855f7 100%
     );
     background-clip: text;
     color:transparent;
@@ -77,8 +77,8 @@ border-bottom: 3px solid transparent;
     border-radius: 3rem;
     background: linear-gradient(
         270deg,
-        #DF8908 10%,
-        #ff1d15 100%
+      #c084fc 10%,
+        #a855f7 100%
     );
     letter-spacing: 1px;
     cursor: pointer;
@@ -221,4 +221,5 @@ width: 15px;
 ::-webkit-scrollbar-track{
     background-color: var(--bg-color);
 }
+
 
