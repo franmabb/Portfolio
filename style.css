@@ -222,4 +222,94 @@ width: 15px;
     background-color: var(--bg-color);
 }
 
+.heading{
+    text-align: center;
+    font-size: 7rem;
+    margin: 5rem 0;
+}
 
+.skills{
+    background-color: var(--bg-color);
+    color: black;
+}
+.skills h2{
+    color: var(--text-color);
+}
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 2.5rem;
+}
+.skills-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    height: 600px;
+    border-radius: 3rem;
+    cursor: pointer;
+    border: 5 px solid transparent;
+    transition: 0.4s ease-in-out;
+}
+.skills-box:hover{
+    background:var(--second-bg-color);
+    color: var(--main-color);
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+}
+.skills-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+.skills-info h4{
+font-size: 4rem;
+margin: 2rem 0;
+font-weight: 800;
+}
+.skills-info p{
+    font-size:1.4rem;
+    font-weight: 600;
+    line-height: 1.7;
+}
+.skills-info i{
+    font-size: 8rem;
+}
+
+.projects-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    place-items: center;
+    gap: 3rem;
+    row-gap: 5rem;
+}
+.projects-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 3rem;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: o o 5px var(--main-color);
+    transition: 0.3s ease;
+}
+.projects-card h3{
+    font-size: 3rem;
+}
+.projects-card:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color);
+    transform: scale(1.02);
+}
+.projects-card p{
+    font-size: 1.6rem;
+}
