@@ -27,7 +27,7 @@ html {
     top: 0;
     left: 0;
     padding: 4rem 15%;
-    background:rgba(0, 0, 0.3);
+    background:rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -381,5 +381,51 @@ font-weight: 800;
         top: 100%;
         right: 0;
         width: 50%;
+        padding: 1rem 3rem;
+        background: rgb(0, 0, 0, 0.8);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display:none;
     }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--text-color);
+    }
+    .navbar.active{
+        display: block;
+    }
+    .gradient-btn{
+        display: none;
+    }
+    .home{
+        flex-direction: column-reverse;
+        margin: 5rem 0;
+        gap: 5rem;
+    }
+    .home-content{
+        align-items: center;
+        text-align: center;
+    }
+    .home-img img{
+        width: 56vw;
+    }
+    .about{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .about h2{
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .about img{
+        width: 52vw;
+
+    }
+    .contact form{
+        flex-direction: column;
+    }
+    
 }
