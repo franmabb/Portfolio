@@ -446,3 +446,113 @@ font-weight: 800;
 
     
 }
+/* --- Estilo de la Sección GitHub (Estilo Imagen) --- */
+
+/* Contenedor en cuadrícula (Grid) */
+.github-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsivo */
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* Diseño de la Tarjeta Individual */
+.github-card {
+    background-color: #0d1117; /* Fondo oscuro estilo GitHub */
+    border: 1px solid #30363d; /* Borde sutil */
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Para que todas tengan la misma altura */
+}
+
+.github-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--main-color); /* Tu color violeta al pasar el ratón */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Cabecera de la tarjeta: Título y Stats */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.card-header h3 {
+    font-size: 1.8rem;
+    color: #e6edf3; /* Blanco casi puro */
+    font-weight: 600;
+    margin-right: 1rem;
+    word-break: break-word;
+}
+
+.card-stats {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.4rem;
+    color: #7d8590; /* Gris claro */
+    white-space: nowrap;
+}
+
+.card-stats span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-stats i {
+    font-size: 1.6rem;
+}
+
+.stat-fork { color: #a371f7; } /* Icono Fork Violeta */
+.stat-star { color: #e3b341; } /* Icono Estrella Amarillo */
+
+/* Descripción */
+.github-card p {
+    font-size: 1.4rem;
+    color: #8b949e; /* Texto gris suave para descripción */
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1; /* Empuja el footer hacia abajo */
+}
+
+/* Pie de tarjeta: Etiquetas y Licencia */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+/* Estilo de las etiquetas (Tags) */
+.topic-tag {
+    background-color: #13233a; /* Fondo azul oscuro */
+    color: #58a6ff; /* Texto azul brillante */
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem; /* Bordes redondeados tipo píldora */
+    font-weight: 500;
+}
+
+.card-license {
+    font-size: 1.2rem;
+    color: #7d8590;
+}
+
+/* Enlace que cubre toda la tarjeta para hacerla clickeable */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
