@@ -377,6 +377,43 @@ font-weight: 800;
     display: flex;
     justify-content: center;
 }
+
+@media (max-width: 768px) {
+
+    /* --- FORZAR CENTRADO DE PROYECTOS EN MÓVIL --- */
+    
+    /* 1. El contenedor principal de la sección */
+    .projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra los hijos horizontalmente */
+        text-align: center;
+        padding: 5rem 4%; /* Espacio lateral seguro */
+    }
+
+    /* 2. La cuadrícula de tarjetas */
+    .github-grid {
+        display: flex; /* Cambiamos Grid por Flex en móvil para mejor control */
+        flex-direction: column;
+        align-items: center; /* Centra las tarjetas */
+        width: 100%;
+        gap: 3rem;
+    }
+
+    /* 3. La tarjeta individual */
+    .github-card {
+        width: 100%; 
+        max-width: 350px; /* Evita que se estire demasiado, manteniendo forma de tarjeta */
+        margin: 0 auto; /* Centrado extra de seguridad */
+    }
+
+
+    .heading {
+        text-align: center;
+        width: 100%;
+    }
+}
+
 @media (max-width:1285px){
     #menu-icon{
         display: block;
@@ -587,12 +624,6 @@ font-weight: 800;
     font-weight: bold;
     box-shadow: 0 0 10px var(--main-color); 
 }
-
-
-
-
-
-
 
 
 .pagination {

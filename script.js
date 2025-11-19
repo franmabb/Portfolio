@@ -1,12 +1,11 @@
-// =========== CONFIGURACIÓN DEL PORTAFOLIO ===========
-const username = 'franmabb'; // Tu usuario de GitHub
+const username = 'franmabb'; 
 const container = document.getElementById('github-projects');
 const paginationContainer = document.getElementById('pagination-controls');
-const itemsPerPage = 6; // Tarjetas por página
+const itemsPerPage = 6; 
 let currentPage = 1;
-let allRepos = []; // Lista completa filtrada y ordenada
+let allRepos = []; 
 
-// Repos destacados, pon aquí los nombres exactos (opcional)
+
 const reposDestacados = [
  'Portfolio',      
     'Web-sostenibilidad',    
@@ -14,7 +13,7 @@ const reposDestacados = [
     'Python'
 ];
 
-// =========== CARGA Y ORDEN DE REPOSITORIOS ===========
+
 
 async function initPortfolio() {
     try {
@@ -42,7 +41,7 @@ async function initPortfolio() {
     }
 }
 
-// =========== RENDER DE PROYECTOS Y PAGINACIÓN ===========
+
 
 function renderPage(page) {
     currentPage = page;
@@ -62,7 +61,7 @@ function renderPage(page) {
 
         const licenseText = repo.license ? (repo.license.spdx_id || repo.license.name) : '';
 
-        // Card GitHub-style
+  
         const cardHtml = `
             <a href="${repo.html_url}" target="_blank" class="card-link">
                 <div class="github-card">
@@ -87,13 +86,12 @@ function renderPage(page) {
     renderPaginationControls();
 }
 
-// =========== PANEL DE PAGINACIÓN ===========
 
 function renderPaginationControls() {
     const totalPages = Math.ceil(allRepos.length / itemsPerPage);
     paginationContainer.innerHTML = '';
 
-    if (totalPages <= 1) return; // No mostrar si hay sólo una página
+    if (totalPages <= 1) return; 
 
     // Previous
     const prevBtn = document.createElement('button');
@@ -119,13 +117,12 @@ function renderPaginationControls() {
     paginationContainer.appendChild(nextBtn);
 }
 
-// Cambiar página y hacer scroll suave arriba
+
 function changePage(newPage) {
     renderPage(newPage);
     document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
 }
 
-// =========== MENÚ RESPONSIVE (si lo usas) ===========
 
 const menuIconBtn = document.querySelector('#menu-icon');
 const navbarMenu = document.querySelector('.navbar');
@@ -137,6 +134,5 @@ if(menuIconBtn && navbarMenu) {
     };
 }
 
-// =========== INICIAR ===========
 
 initPortfolio();
