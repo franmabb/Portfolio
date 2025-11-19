@@ -3,23 +3,23 @@
 This repository contains my personal portfolio website, developed with **HTML**, **CSS**, and **JavaScript**.  
 It showcases my web development projects and highlights the skills and technologies I use.
 
-## 🌟 Features
+## Features
 
 - Responsive and modern web design
 - Project section with brief descriptions
 - Overview of my skills and expertise
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
 
-## 👉 Live Preview
+## Live Preview
 
 Check out the portfolio online: [https://franmab.es](https://franmab.es)
 
-## 🚧 Project Status
+## Project Status
 
 This portfolio is continuously updated and improved.
 
