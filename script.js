@@ -1,6 +1,3 @@
-// ==========================================
-//      CONFIGURACIÓN DEL PORTAFOLIO
-// ==========================================
 
 const username = 'franmabb'; // Tu usuario
 const container = document.getElementById('github-projects');
@@ -17,9 +14,6 @@ const reposDestacados = [
     'Python',   
 ]; 
 
-// ==========================================
-//      LÓGICA PRINCIPAL (GITHUB)
-// ==========================================
 
 async function initPortfolio() {
     try {
@@ -123,11 +117,6 @@ function changePage(newPage) {
     document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
 }
 
-// ==========================================
-//      MENÚ RESPONSIVE (CORREGIDO)
-// ==========================================
-// Usamos const o let solo si no se han declarado antes, 
-// pero para evitar conflictos, simplemente seleccionamos directamente.
 
 const menuIconBtn = document.querySelector('#menu-icon');
 const navbarMenu = document.querySelector('.navbar');
@@ -139,5 +128,4 @@ if(menuIconBtn && navbarMenu) {
     };
 }
 
-// Arrancar todo
 initPortfolio();
