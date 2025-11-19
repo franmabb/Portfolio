@@ -588,47 +588,37 @@ font-weight: 800;
     box-shadow: 0 0 10px var(--main-color); 
 }
 
+
+
+
+
+
+
+
 .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem; 
-    margin-top: 3rem;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; /* Fuente GitHub */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
 }
-
 .page-btn {
-    background-color: transparent;
-    border: none;
-    color: #c9d1d9; 
-    padding: 0.5rem 1rem;
-    font-size: 1.4rem;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.2s ease;
-    font-weight: 600; 
+  background-color: transparent;
+  border: none;
+  color: #c9d1d9;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  font-weight: 600;
 }
-
-.page-btn:hover:not(.disabled) {
-    background-color: #21262d; 
-    color: #58a6ff; 
-}
-
 .page-btn.active {
-    background-color: #1f6feb; 
-    color: #ffffff;
-    pointer-events: none; 
+  background-color: #1f6feb;
+  color: #fff;
 }
-
-
 .page-btn.disabled {
-    color: #484f58; 
-    cursor: not-allowed;
-}
-
-.nav-btn {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  color: #484f58;
+  cursor: not-allowed;
 }
 

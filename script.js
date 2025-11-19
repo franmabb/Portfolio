@@ -1,19 +1,20 @@
-
-const username = 'franmabb'; // Tu usuario
+// =========== CONFIGURACIÓN DEL PORTAFOLIO ===========
+const username = 'franmabb'; // Tu usuario de GitHub
 const container = document.getElementById('github-projects');
 const paginationContainer = document.getElementById('pagination-controls');
-const itemsPerPage = 6; 
+const itemsPerPage = 6; // Tarjetas por página
 let currentPage = 1;
-let allRepos = []; 
+let allRepos = []; // Lista completa filtrada y ordenada
 
-// Repositorios destacados
+// Repos destacados, pon aquí los nombres exactos (opcional)
 const reposDestacados = [
-    'Portfolio',       
-    'Web-sostenibilidad',     
+ 'Portfolio',      
+    'Web-sostenibilidad',    
     'Dynamic-DNS',
-    'Python',   
-]; 
+    'Python'
+];
 
+// =========== CARGA Y ORDEN DE REPOSITORIOS ===========
 
 async function initPortfolio() {
     try {
@@ -36,14 +37,17 @@ async function initPortfolio() {
         renderPage(1);
 
     } catch (error) {
-        console.error('Error cargando GitHub:', error);
+        console.error('Error cargando proyectos:', error);
+        container.innerHTML = '<p style="color:white; text-align:center;">No se pudieron cargar los proyectos.</p>';
     }
 }
 
+// =========== RENDER DE PROYECTOS Y PAGINACIÓN ===========
+
 function renderPage(page) {
     currentPage = page;
-    container.innerHTML = ''; 
-    
+    container.innerHTML = '';
+
     const start = (page - 1) * itemsPerPage;
     const end = start + itemsPerPage;
     const reposToShow = allRepos.slice(start, end);
@@ -51,13 +55,14 @@ function renderPage(page) {
     reposToShow.forEach(repo => {
         let topicsHtml = '';
         if (repo.topics && repo.topics.length > 0) {
-            topicsHtml = repo.topics.slice(0, 4).map(topic => 
+            topicsHtml = repo.topics.slice(0, 4).map(topic =>
                 `<span class="topic-tag">${topic}</span>`
             ).join('');
         }
 
         const licenseText = repo.license ? (repo.license.spdx_id || repo.license.name) : '';
 
+        // Card GitHub-style
         const cardHtml = `
             <a href="${repo.html_url}" target="_blank" class="card-link">
                 <div class="github-card">
@@ -82,11 +87,13 @@ function renderPage(page) {
     renderPaginationControls();
 }
 
+// =========== PANEL DE PAGINACIÓN ===========
+
 function renderPaginationControls() {
     const totalPages = Math.ceil(allRepos.length / itemsPerPage);
-    paginationContainer.innerHTML = ''; 
+    paginationContainer.innerHTML = '';
 
-    if (totalPages <= 1) return; 
+    if (totalPages <= 1) return; // No mostrar si hay sólo una página
 
     // Previous
     const prevBtn = document.createElement('button');
@@ -112,20 +119,24 @@ function renderPaginationControls() {
     paginationContainer.appendChild(nextBtn);
 }
 
+// Cambiar página y hacer scroll suave arriba
 function changePage(newPage) {
     renderPage(newPage);
     document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
 }
 
+// =========== MENÚ RESPONSIVE (si lo usas) ===========
 
 const menuIconBtn = document.querySelector('#menu-icon');
 const navbarMenu = document.querySelector('.navbar');
 
 if(menuIconBtn && navbarMenu) {
     menuIconBtn.onclick = () => {
-        menuIconBtn.classList.toggle("bx-x");
+        menuIconBtn.classList.toggle('bx-x');
         navbarMenu.classList.toggle('active');
     };
 }
+
+// =========== INICIAR ===========
 
 initPortfolio();
