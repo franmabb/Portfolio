@@ -446,36 +446,34 @@ font-weight: 800;
 
     
 }
-/* --- Estilo de la Sección GitHub (Estilo Imagen) --- */
 
-/* Contenedor en cuadrícula (Grid) */
 .github-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsivo */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
     gap: 2rem;
     padding: 2rem 0;
 }
 
-/* Diseño de la Tarjeta Individual */
+
 .github-card {
-    background-color: #0d1117; /* Fondo oscuro estilo GitHub */
-    border: 1px solid #30363d; /* Borde sutil */
+    background-color: #0d1117; 
+    border: 1px solid #30363d; 
     border-radius: 8px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%; /* Para que todas tengan la misma altura */
+    height: 100%;
 }
 
 .github-card:hover {
     transform: translateY(-5px);
-    border-color: var(--main-color); /* Tu color violeta al pasar el ratón */
+    border-color: var(--main-color); 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Cabecera de la tarjeta: Título y Stats */
+
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -485,7 +483,7 @@ font-weight: 800;
 
 .card-header h3 {
     font-size: 1.8rem;
-    color: #e6edf3; /* Blanco casi puro */
+    color: #e6edf3; 
     font-weight: 600;
     margin-right: 1rem;
     word-break: break-word;
@@ -495,7 +493,7 @@ font-weight: 800;
     display: flex;
     gap: 1rem;
     font-size: 1.4rem;
-    color: #7d8590; /* Gris claro */
+    color: #7d8590; 
     white-space: nowrap;
 }
 
@@ -509,19 +507,19 @@ font-weight: 800;
     font-size: 1.6rem;
 }
 
-.stat-fork { color: #a371f7; } /* Icono Fork Violeta */
-.stat-star { color: #e3b341; } /* Icono Estrella Amarillo */
+.stat-fork { color: #a371f7; } 
+.stat-star { color: #e3b341; } 
 
-/* Descripción */
+
 .github-card p {
     font-size: 1.4rem;
-    color: #8b949e; /* Texto gris suave para descripción */
+    color: #8b949e; 
     line-height: 1.6;
     margin-bottom: 2rem;
-    flex-grow: 1; /* Empuja el footer hacia abajo */
+    flex-grow: 1; 
 }
 
-/* Pie de tarjeta: Etiquetas y Licencia */
+
 .card-footer {
     display: flex;
     justify-content: space-between;
@@ -536,13 +534,13 @@ font-weight: 800;
     gap: 0.8rem;
 }
 
-/* Estilo de las etiquetas (Tags) */
+
 .topic-tag {
-    background-color: #13233a; /* Fondo azul oscuro */
-    color: #58a6ff; /* Texto azul brillante */
+    background-color: #13233a; 
+    color: #58a6ff; 
     font-size: 1.2rem;
     padding: 0.4rem 1rem;
-    border-radius: 2rem; /* Bordes redondeados tipo píldora */
+    border-radius: 2rem; 
     font-weight: 500;
 }
 
@@ -551,8 +549,86 @@ font-weight: 800;
     color: #7d8590;
 }
 
-/* Enlace que cubre toda la tarjeta para hacerla clickeable */
+
 .card-link {
     text-decoration: none;
     color: inherit;
 }
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 3rem;
+}
+
+.page-btn {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: #8b949e;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.page-btn:hover {
+    border-color: #8b949e;
+    color: #e6edf3;
+}
+
+
+.page-btn.active {
+    background: var(--main-color); 
+    border-color: var(--main-color);
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--main-color); 
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; 
+    margin-top: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; /* Fuente GitHub */
+}
+
+.page-btn {
+    background-color: transparent;
+    border: none;
+    color: #c9d1d9; 
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    font-weight: 600; 
+}
+
+.page-btn:hover:not(.disabled) {
+    background-color: #21262d; 
+    color: #58a6ff; 
+}
+
+.page-btn.active {
+    background-color: #1f6feb; 
+    color: #ffffff;
+    pointer-events: none; 
+}
+
+
+.page-btn.disabled {
+    color: #484f58; 
+    cursor: not-allowed;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
