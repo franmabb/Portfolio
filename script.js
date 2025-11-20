@@ -136,3 +136,31 @@ if(menuIconBtn && navbarMenu) {
 
 
 initPortfolio();
+
+
+
+const header = document.querySelector('.header');
+let lastScrollY = window.scrollY; 
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+
+    if (Math.abs(currentScroll - lastScrollY) < 10) return;
+
+ 
+    if (currentScroll > lastScrollY && currentScroll > 100) {
+        header.classList.add("hide");
+    } else {
+       
+        header.classList.remove("hide");
+    }
+
+    if (currentScroll > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+
+    lastScrollY = currentScroll;
+});
+

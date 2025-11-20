@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -380,31 +381,27 @@ font-weight: 800;
 
 @media (max-width: 768px) {
 
-    /* --- FORZAR CENTRADO DE PROYECTOS EN MÓVIL --- */
     
-    /* 1. El contenedor principal de la sección */
     .projects {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centra los hijos horizontalmente */
+        align-items: center; 
         text-align: center;
-        padding: 5rem 4%; /* Espacio lateral seguro */
+        padding: 5rem 4%; 
     }
 
-    /* 2. La cuadrícula de tarjetas */
     .github-grid {
-        display: flex; /* Cambiamos Grid por Flex en móvil para mejor control */
+        display: flex; 
         flex-direction: column;
-        align-items: center; /* Centra las tarjetas */
+        align-items: center; 
         width: 100%;
         gap: 3rem;
     }
 
-    /* 3. La tarjeta individual */
     .github-card {
         width: 100%; 
-        max-width: 350px; /* Evita que se estire demasiado, manteniendo forma de tarjeta */
-        margin: 0 auto; /* Centrado extra de seguridad */
+        max-width: 350px; 
+        margin: 0 auto; 
     }
 
 
@@ -415,6 +412,19 @@ font-weight: 800;
 }
 
 @media (max-width:1285px){
+
+    .logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-left: 1px;
+}
+
+    .header .home{
+        margin-left: 3px ;
+    }
     #menu-icon{
         display: block;
     }
@@ -653,3 +663,32 @@ font-weight: 800;
   cursor: not-allowed;
 }
 
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 0.3s ease,
+                padding 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.header.hide {
+    transform: translateY(-100%); 
+}
+
+.header.scrolled {
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem 9%;
+    background: rgba(0, 0, 0, 0.85);
+}
